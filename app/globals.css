@@ -1,147 +1,79 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer base {
   html,
   body {
-    @apply bg-black text-gray-100 antialiased;
+    @apply antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: 
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(30, 30, 35, 0.8), transparent),
+      linear-gradient(180deg, 
+        rgb(18, 18, 20) 0%, 
+        rgb(10, 10, 12) 25%, 
+        rgb(8, 8, 10) 50%, 
+        rgb(10, 10, 12) 75%, 
+        rgb(15, 15, 18) 100%
+      );
+    background-attachment: fixed;
+    min-height: 100vh;
   }
 
+  h1 {
+    @apply text-4xl md:text-5xl font-semibold tracking-tight text-gray-50;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl font-semibold text-gray-50;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl font-semibold text-gray-50;
+  }
+
+  p {
+    @apply text-gray-300 leading-relaxed;
+  }
+
+  a {
+    @apply text-gray-100 underline-offset-4 decoration-transparent hover:decoration-gray-400 transition;
+  }
+}
+
+@layer components {
   .page-shell {
-    @apply mx-auto max-w-5xl px-4 md:px-6;
+    @apply mx-auto max-w-6xl px-4 md:px-6;
   }
-}
 
-/* Contact Page Styles */
-.contact-container {
-  @apply mx-auto max-w-7xl px-4 md:px-6 py-10 md:py-16;
-}
+  .section-shell {
+    @apply mx-auto max-w-6xl px-4 md:px-6 py-10 md:py-16;
+  }
 
-.contact-header {
-  @apply bg-neutral-900/50 border border-neutral-800 rounded-2xl p-8 md:p-12 mb-12 text-center;
-}
+  .glass-panel {
+    @apply rounded-[28px] border border-white/[0.08] backdrop-blur-3xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] relative overflow-hidden;
+    background: rgba(255, 255, 255, 0.03);
+  }
 
-.contact-title {
-  @apply text-4xl md:text-5xl font-bold;
-}
+  .glass-panel::before {
+    content: "";
+    @apply absolute top-0 left-0 w-full h-px pointer-events-none;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.06) 50%, transparent);
+  }
 
-.contact-main-content {
-  @apply grid md:grid-cols-2 gap-8 md:gap-12 mb-16;
-}
+  .glass-card {
+    @apply rounded-[20px] border border-white/[0.06] backdrop-blur-2xl shadow-[0_4px_16px_rgba(0,0,0,0.3)] transition;
+    background: rgba(255, 255, 255, 0.02);
+  }
+  
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.08);
+  }
 
-.contact-info-panel {
-  @apply space-y-4;
-}
+  .primary-cta {
+    @apply inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold text-slate-950 bg-[#7DE7D6] hover:bg-[#9BF0E1] shadow-[0_12px_28px_rgba(0,0,0,0.7)] transition-transform duration-150 hover:scale-[1.02];
+  }
 
-.contact-info-text {
-  @apply text-gray-300 leading-relaxed;
-}
-
-.contact-link {
-  @apply text-gray-100 underline hover:text-white transition;
-}
-
-.contact-divider {
-  @apply border-t border-neutral-800 mt-8;
-}
-
-.contact-form-section {
-  @apply bg-neutral-900/40 border border-neutral-800 rounded-xl p-6 md:p-8;
-}
-
-.contact-form {
-  @apply space-y-6;
-}
-
-.contact-form-group {
-  @apply space-y-2;
-}
-
-.contact-label {
-  @apply block text-sm font-medium text-gray-300;
-}
-
-.contact-input {
-  @apply w-full px-4 py-3 bg-neutral-950 border border-neutral-700 rounded-lg text-gray-100 placeholder:text-gray-600 focus:outline-none focus:border-gray-500 transition;
-}
-
-.contact-textarea {
-  @apply w-full px-4 py-3 bg-neutral-950 border border-neutral-700 rounded-lg text-gray-100 placeholder:text-gray-600 focus:outline-none focus:border-gray-500 transition resize-none;
-}
-
-.contact-submit-button {
-  @apply w-full bg-gray-100 text-black font-medium px-6 py-3 rounded-full hover:bg-white transition;
-}
-
-/* Officers Section */
-.officers-section {
-  @apply mt-16 pt-16 border-t border-neutral-800;
-}
-
-.officers-container {
-  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
-}
-
-.officer-card {
-  @apply bg-neutral-900/40 border border-neutral-800 rounded-xl p-5 hover:bg-neutral-900/60 transition;
-}
-
-.officer-image-wrapper {
-  @apply mb-4 aspect-square rounded-lg overflow-hidden bg-neutral-800;
-}
-
-.officer-image {
-  @apply w-full h-full object-cover;
-}
-
-.officer-info {
-  @apply space-y-2;
-}
-
-.officer-name {
-  @apply text-lg font-semibold;
-}
-
-.officer-role {
-  @apply text-sm text-gray-400;
-}
-
-.officer-links {
-  @apply flex gap-3 mt-3;
-}
-
-.officer-link {
-  @apply text-sm px-3 py-1.5 rounded-full border border-neutral-700 hover:bg-neutral-800 transition;
-}
-
-.officer-email {
-  @apply text-gray-300;
-}
-
-.officer-linkedin {
-  @apply text-gray-300;
+  .secondary-cta {
+    @apply inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium text-gray-100 border border-white/25 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition;
+  }
 }
