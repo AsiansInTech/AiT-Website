@@ -4,7 +4,7 @@ const ContactPage = () => {
   // Temp variables for social media links
   const DISCORD_LINK = '#discord-link-temp'
   const INSTAGRAM_LINK = '#instagram-link-temp'
-  const CONTACT_EMAIL = 'info@cougarcs.com'
+  const CONTACT_EMAIL = 'info@AiT.com'
 
   // Temp officer data - replace with actual data later
   const officers = [
@@ -12,7 +12,7 @@ const ContactPage = () => {
       id: 1,
       name: 'John Smith',
       role: 'President',
-      email: 'president@cougarcs.com',
+      email: 'president@AiT.com',
       linkedin: 'https://linkedin.com/in/johnsmith-temp',
       image: '/officer-placeholder-1.jpg'
     },
@@ -20,7 +20,7 @@ const ContactPage = () => {
       id: 2,
       name: 'Sarah Johnson',
       role: 'Vice President',
-      email: 'vp@cougarcs.com',
+      email: 'vp@AiT.com',
       linkedin: 'https://linkedin.com/in/sarahjohnson-temp',
       image: '/officer-placeholder-2.jpg'
     },
@@ -28,7 +28,7 @@ const ContactPage = () => {
       id: 3,
       name: 'Michael Chen',
       role: 'Secretary',
-      email: 'secretary@cougarcs.com',
+      email: 'secretary@AiT.com',
       linkedin: 'https://linkedin.com/in/michaelchen-temp',
       image: '/officer-placeholder-3.jpg'
     },
@@ -36,7 +36,7 @@ const ContactPage = () => {
       id: 4,
       name: 'Emily Davis',
       role: 'Treasurer',
-      email: 'treasurer@cougarcs.com',
+      email: 'treasurer@AiT.com',
       linkedin: 'https://linkedin.com/in/emilydavis-temp',
       image: '/officer-placeholder-4.jpg'
     },
@@ -44,7 +44,7 @@ const ContactPage = () => {
       id: 5,
       name: 'David Wilson',
       role: 'Events Coordinator',
-      email: 'events@cougarcs.com',
+      email: 'events@AiT.com',
       linkedin: 'https://linkedin.com/in/davidwilson-temp',
       image: '/officer-placeholder-5.jpg'
     },
@@ -52,7 +52,7 @@ const ContactPage = () => {
       id: 6,
       name: 'Jessica Martinez',
       role: 'Marketing Director',
-      email: 'marketing@cougarcs.com',
+      email: 'marketing@couAiTgarcs.com',
       linkedin: 'https://linkedin.com/in/jessicamartinez-temp',
       image: '/officer-placeholder-6.jpg'
     },
@@ -60,7 +60,7 @@ const ContactPage = () => {
       id: 7,
       name: 'Robert Taylor',
       role: 'Technical Lead',
-      email: 'technical@cougarcs.com',
+      email: 'technical@AiT.com',
       linkedin: 'https://linkedin.com/in/roberttaylor-temp',
       image: '/officer-placeholder-7.jpg'
     },
@@ -68,7 +68,7 @@ const ContactPage = () => {
       id: 8,
       name: 'Amanda Brown',
       role: 'Outreach Coordinator',
-      email: 'outreach@cougarcs.com',
+      email: 'outreach@AiT.com',
       linkedin: 'https://linkedin.com/in/amandabrown-temp',
       image: '/officer-placeholder-8.jpg'
     }
@@ -128,7 +128,7 @@ const ContactPage = () => {
                 id="name"
                 name="name"
                 className="w-full rounded-xl border border-white/10 bg-white/5 backdrop-blur-xl px-4 py-2.5 text-gray-100 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white/20 transition"
-                placeholder="Cody Cougar"
+                placeholder="Cody"
               />
             </div>
 
@@ -141,7 +141,7 @@ const ContactPage = () => {
                 id="email"
                 name="email"
                 className="w-full rounded-xl border border-white/10 bg-white/5 backdrop-blur-xl px-4 py-2.5 text-gray-100 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white/20 transition"
-                placeholder="info@cougarcs.com"
+                placeholder="info@AiT.com"
               />
             </div>
 
