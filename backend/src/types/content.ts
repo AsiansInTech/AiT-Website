@@ -13,3 +13,27 @@ export interface Officer extends BaseEntity {
   linkedinUrl?: string;
 }
 
+export interface Member extends BaseEntity {
+  name: string;
+  email: string;
+  studentId?: string;
+  phone?: string;
+  shirtSize?: string;
+  joinDate: string;
+  expirationDate: string;
+  paid: boolean; // Maps to "Membership Fee Paid" in Notion
+  stripeSessionId?: string;
+}
+
+export interface CreateMemberInput {
+  name: string;
+  email: string;
+  studentId?: string;
+  phone?: string;
+  shirtSize?: string;
+  joinDate: string;
+  expirationDate: string;
+  paid: boolean;
+  stripeSessionId?: string;
+}
+

@@ -5,4 +5,5 @@ export const healthRepository = {
 };
 
 export { officersRepository } from './officers.repository';
+export { membersRepository } from './members.repository';
 

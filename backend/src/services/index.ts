@@ -7,4 +7,5 @@ export const healthService = {
 };
 
 export { officersService } from './officers.service';
+export { membersService } from './members.service';
 
