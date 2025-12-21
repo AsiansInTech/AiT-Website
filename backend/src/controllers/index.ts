@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import { healthService } from '../services';
 import { ok } from '../utils/httpResponses';
+import { eventController } from './eventController';
 
 export const healthController = {
   health: async (req: Request, res: Response, next: NextFunction): Promise<void> => {
@@ -14,4 +15,5 @@ export const healthController = {
 };
 
 export { officersController } from './officers.controller';
+export { eventController };
 
