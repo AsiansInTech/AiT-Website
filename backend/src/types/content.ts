@@ -22,27 +22,8 @@ export interface Event extends BaseEntity {
   location?: string;
   description?: string;
   status: EventStatus;
-  attendees: string[];
+  published: boolean;
+  rsvpLink?: string;
   createdAt?: string;
   updatedAt?: string;
-}
-
-export interface CreateEventDto {
-  name: string;
-  date: string; // startDate
-  endDate?: string;
-  location?: string;
-  description?: string;
-  status?: EventStatus;
-  attendees?: string[];
-}
-
-export interface UpdateEventDto {
-  name?: string;
-  date?: string; // startDate
-  endDate?: string;
-  location?: string;
-  description?: string;
-  status?: EventStatus;
-  attendees?: string[];
 }

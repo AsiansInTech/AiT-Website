@@ -3,11 +3,12 @@ export type NotionPageId = string;
 export type NotionDatabaseId = string;
 
 export interface NotionEventProperties {
-  name: { title: Array<{ plain_text: string }> };
-  date: { date: { start: string; end?: string } };
-  location?: { rich_text: Array<{ plain_text: string }> };
-  description?: { rich_text: Array<{ plain_text: string }> };
-  status: { select: { name: string } | null };
-  attendees: { multi_select: Array<{ name: string }> };
+  Name: { title: Array<{ plain_text: string }> };
+  Date: { date: { start: string; end?: string } | null };
+  Location?: { rich_text: Array<{ plain_text: string }> };
+  Description?: { rich_text: Array<{ plain_text: string }> };
+  Status: { select: { name: string } | null };
+  Published?: { checkbox: boolean };
+  'RSVP (Link)'?: { url: string | null };
 }
 
