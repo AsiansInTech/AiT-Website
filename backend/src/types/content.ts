@@ -13,3 +13,17 @@ export interface Officer extends BaseEntity {
   linkedinUrl?: string;
 }
 
+export type EventStatus = 'confirmed' | 'planned' | 'cancelled';
+
+export interface Event extends BaseEntity {
+  name: string;
+  date: string; // startDate
+  endDate?: string;
+  location?: string;
+  description?: string;
+  status: EventStatus;
+  published: boolean;
+  rsvpLink?: string;
+  createdAt?: string;
+  updatedAt?: string;
+}

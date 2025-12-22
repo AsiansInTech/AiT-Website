@@ -1,3 +1,5 @@
+import { eventRepository } from './eventRepository';
+
 export const healthRepository = {
   getHealth: async (): Promise<{ status: string }> => {
     return { status: 'ok' };
@@ -5,4 +7,5 @@ export const healthRepository = {
 };
 
 export { officersRepository } from './officers.repository';
+export { eventRepository };
 
